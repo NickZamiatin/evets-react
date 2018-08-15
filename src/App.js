@@ -6,6 +6,7 @@ import LoandingPage from './components/LoandingPage'
 import NotFound from './components/NotFound'
 import Events from './containers/Events'
 import ViewOneEvent from './containers/ViewOneEvent'
+import CreateEvent from './containers/CreateEvent'
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
       <Switch>
         <Route exact path="/" component={LoandingPage} />
         <Route  exact path="/events" component={Events} />
+        <Route  path="/events/create" component={CreateEvent} />
         <Route  path="/events/:id" component={ViewOneEvent} />
         <Route  path="*" component={NotFound} />
       </Switch>
