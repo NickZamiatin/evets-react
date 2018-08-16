@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {Link , withRouter} from 'react-router-dom';
+import { withRouter} from 'react-router-dom';
 import EventForm from './EventForm';
+import {createEvent} from '../API'
 
 class CreateEvents extends Component {
 state = {

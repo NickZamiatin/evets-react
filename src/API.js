@@ -10,12 +10,12 @@ export function getEvent(id){
   .then(res => res.json())
 }
 
-export function createEvents(event){
+export function createEvent(event){
   return fetch(`${API_URL}`,{
     method:'POST',
     body: JSON.stringify(event),
     headers: {
-     "content-type" : 'aplication/json'
+     "content-type": 'application/json'
     }
   })
   .then(res => res.json())
