@@ -7,7 +7,7 @@ import NotFound from './components/NotFound'
 import Events from './containers/Events'
 import ViewOneEvent from './containers/ViewOneEvent'
 import CreateEvent from './containers/CreateEvent'
-
+import UpdateEvent from './containers/UpdateEvent';
 class App extends Component {
   render() {
     return (
@@ -15,9 +15,10 @@ class App extends Component {
          <Header />
       <main className='container'>
       <Switch>
-        <Route exact path="/" component={LoandingPage} />
+        <Route  exact path="/" component={LoandingPage} />
         <Route  exact path="/events" component={Events} />
-        <Route  path="/events/create" component={CreateEvent} />
+        <Route  exact path="/events/create" component={CreateEvent} />
+        <Route  path="/events/:id/edit" component={UpdateEvent} />
         <Route  path="/events/:id" component={ViewOneEvent} />
         <Route  path="*" component={NotFound} />
       </Switch>

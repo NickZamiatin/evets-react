@@ -20,3 +20,13 @@ export function createEvent(event){
   })
   .then(res => res.json())
 }
+export function updateEvent(id, event){
+  return fetch(`${API_URL}/${id}`,{
+    method:'PUT',
+    body: JSON.stringify(event),
+    headers: {
+     "content-type": 'application/json'
+    }
+  })
+  .then(res => res.json())
+}

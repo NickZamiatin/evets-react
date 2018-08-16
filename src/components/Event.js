@@ -10,7 +10,7 @@ const Event = ({event, showEdit}) =>{
     <h2 className="card-text">{event.date}</h2>
     {
       showEdit ? 
-    <Link to={`/events/${event.id}`} type="buttom" className="btn btn-danger">Edit</Link> :
+    <Link to={`/events/${event.id}/edit`} type="buttom" className="btn btn-danger">Edit</Link> :
     <Link to={`/events/${event.id}`} type="buttom" className="btn btn-primary">See more</Link>
     }
   </div>
