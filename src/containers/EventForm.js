@@ -66,7 +66,7 @@ formSubmit = (event) => {
            <label className="control-label"  htmlFor="disabledInput">Description of Event</label>
             <input  onChange={this.valueChange} value={event.description} className="form-control" name="description" id="disabledInput" type="text" placeholder="Description " disabled=""/>
          </div>
-           <button type="buttom" className="btn btn-primary">Create</button>
+           <button type="buttom" className="btn btn-primary">Submit</button>
        </form>
     )
   }

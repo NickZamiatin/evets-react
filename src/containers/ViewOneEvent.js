@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import {getEvent} from '../API';
+import {getEvent, deleteEvent} from '../API';
 import Event from '../components/Event';
+import { withRouter} from 'react-router-dom';
+
 
 
 class  ViewOneEvent extends Component {
@@ -20,15 +22,24 @@ class  ViewOneEvent extends Component {
         },1000)
       })
   }
+
+  deleteEvent = () => {
+    deleteEvent(this.state.event.id)
+    .then(() =>{
+      console.log(this.state.event.id)
+       this.props.history.push('/events')
+      })
+  }
+
   render(){
     return (
       <div>
         {this.state.isLoading ? <h2>Loading </h2> : 
-            <Event  event={this.state.event} showEdit={true}/>
+            <Event deleteEvent={this.deleteEvent}  event={this.state.event} showEdit={true}/>
          }
       </div>
     )
 }
 }
 
-export default ViewOneEvent
+export default withRouter(ViewOneEvent)

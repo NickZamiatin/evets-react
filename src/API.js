@@ -30,3 +30,11 @@ export function updateEvent(id, event){
   })
   .then(res => res.json())
 }
+
+export function deleteEvent(id){
+  console.log(id)
+  return fetch(`${API_URL}/${id}`,{
+    method:'DELETE'
+  })
+  .then(res => res.json())
+}

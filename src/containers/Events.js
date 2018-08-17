@@ -15,7 +15,7 @@ componentDidMount(){
       setTimeout(()=>{
         this.setState({
           events,
-          isLoading: false// dont show false 
+          isLoading: false
         })
       },1000)
     })
@@ -24,11 +24,9 @@ componentDidMount(){
   render (){
     return (
       <div>
-        <h2></h2>
         {this.state.isLoading ? <h2>Loading </h2> : this.state.events.map(event =>(
             <Event key={event.id} event={event} />
         )) }
-        <h2></h2>
       </div>
     );
   }
